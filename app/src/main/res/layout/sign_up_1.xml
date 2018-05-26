@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <include
+        android:id="@+id/include"
+        layout="@layout/asd" />
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/e-mail_1"
+        style="@style/ThemeOverlay.AppCompat.Dialog.Alert"
+        android:layout_width="210dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:hint="@string/请输入邮箱"
+        android:maxLength="40"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/name_1"
+        style="@style/ThemeOverlay.AppCompat.Dialog.Alert"
+        android:layout_width="210dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:hint="@string/请输入昵称"
+        android:maxLength="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e-mail_1" />
+
+    <EditText
+        android:id="@+id/pwd_1"
+        style="@style/ThemeOverlay.AppCompat.Dialog.Alert"
+        android:layout_width="210dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        android:hint="@string/请输入密码"
+        android:maxLength="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <EditText
+        android:id="@+id/pwd_2"
+        style="@style/ThemeOverlay.AppCompat.Dialog.Alert"
+        android:layout_width="210dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        android:hint="@string/请确认密码"
+        android:maxLength="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/sign_up_2"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="470dp"
+        android:background="@drawable/loadbutton1"
+        android:text="@string/确认注册"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/sign_in_1"
+        style="@style/none_1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/none"
+        android:textSize="20sp"
+        android:text="@string/已有账号请登录"
+        android:textColor="#169BD5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_2"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/textView_e-mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/邮箱"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/e-mail_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/昵称"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/name_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_e-mail" />
+
+    <TextView
+        android:id="@+id/textView_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/密码"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/pwd_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+    <TextView
+        android:id="@+id/textView_pwd_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/确认密码"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/pwd_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pwd" />
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd_2" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="230dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd_1" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="230dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_1" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="230dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e-mail_1" />
+
+    <TextView
+        android:id="@+id/emil_error_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/邮箱格式错误"
+        android:textColor="#ff0033"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/pwd_error_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/密码格式错误"
+        android:textColor="#ff0033"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/pwd_error_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/密码不一致"
+        android:textColor="#ff0033"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd_2" />
+
+
+
+</android.support.constraint.ConstraintLayout>
