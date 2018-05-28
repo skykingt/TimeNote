@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/priorit_1"
         android:icon="@drawable/ic_home_black_24dp"
@@ -11,5 +10,4 @@
         android:id="@+id/complete_1"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/隐藏已完成" />
-
 </menu>

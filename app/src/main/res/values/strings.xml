@@ -3,7 +3,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="测试">测试</string>
     <string name="登录">登录</string>
     <string name="注册">注册</string>
     <string name="请输入用户名">请输入用户名</string>
@@ -43,4 +42,9 @@
     <string name="日历">日历视图</string>
     <string name="叶子">叶子计时</string>
     <string name="设置">设置</string>
+    <string name="测试">PagerTabStrip效果演示</string>
+    <string name="所有">所有</string>
+    <string name="_26">26</string>
+    <string name="a">A</string>
+    <string name="level">level</string>
 </resources>

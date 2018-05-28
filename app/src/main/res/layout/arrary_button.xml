@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="#ffffff">
+
+
+    <View
+        android:id="@+id/view_color_1"
+        android:layout_width="5dp"
+        android:layout_height="82dp"
+        android:background="#ff0033"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/taskname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/taskdes"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="-301dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="-301dp" />
+
+    <TextView
+        android:id="@+id/data_1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="-301dp"
+        android:textColor="#ff0033"
+        android:layout_marginLeft="-301dp" />
+    <TextView
+        android:id="@+id/taskp"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginStart="-338dp"
+        android:textColor="#ff0033"
+        android:layout_marginLeft="-338dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_weight="1"
+        android:id="@+id/image_level"
+        app:srcCompat="@drawable/level0"
+        android:contentDescription="@string/level" />
+</LinearLayout>

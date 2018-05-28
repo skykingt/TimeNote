@@ -17,7 +17,7 @@
     </FrameLayout>
 
     <EditText
-        android:id="@+id/e-mail_1"
+        android:id="@+id/e_mail_1"
         style="@style/ThemeOverlay.AppCompat.Dialog.Alert"
         android:layout_width="210dp"
         android:layout_height="37dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.752"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e-mail_1" />
+        app:layout_constraintTop_toBottomOf="@+id/e_mail_1" />
 
     <EditText
         android:id="@+id/pwd_1"
@@ -120,13 +120,13 @@
         tools:ignore="DuplicateIds" />
 
     <TextView
-        android:id="@+id/textView_e-mail"
+        android:id="@+id/textView_e_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:text="@string/邮箱"
         android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/e-mail_1"
+        app:layout_constraintEnd_toStartOf="@+id/e_mail_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
@@ -139,7 +139,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/name_1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_e-mail" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_e_mail" />
 
     <TextView
         android:id="@+id/textView_pwd"
@@ -204,7 +204,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.798"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e-mail_1" />
+        app:layout_constraintTop_toBottomOf="@+id/e_mail_1" />
 
     <TextView
         android:id="@+id/emil_error_1"

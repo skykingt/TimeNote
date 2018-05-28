@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_base1"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.timenote.Ui.Title_base1_ad">
+
+
+    <Button
+        android:id="@+id/list_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/taday_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/list_1" />
+
+    <TextView
+        android:id="@+id/list_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/list_1"
+        android:layout_toRightOf="@+id/list_1"
+        android:text="@string/所有"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/taday_1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/list_spot_1"
+        android:layout_toStartOf="@+id/list_spot_1"
+        android:background="@drawable/calendar2"
+        android:text="@string/_26" />
+
+    <Button
+        android:id="@+id/all_1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/taday_1"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_toLeftOf="@+id/taday_1"
+        android:layout_toStartOf="@+id/taday_1"
+        android:background="@drawable/calendar2"
+        android:text="@string/a" />
+
+    <Button
+        android:id="@+id/list_spot_1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/list_spot_1"
+/>
+
+
+</RelativeLayout>
