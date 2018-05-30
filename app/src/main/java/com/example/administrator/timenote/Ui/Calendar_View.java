@@ -3,8 +3,12 @@ package com.example.administrator.timenote.Ui;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.os.Build;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,9 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -33,16 +39,17 @@ public class Calendar_View extends AppCompatActivity {
 
     private View view1, view2, view3, view4;//四个主界面Pageer
     private ViewPager viewPager;  //对应的viewPager
-
+    private Button list2;
     private List<View> viewList;//view数组
     private static final String TAG = "LogDemo";
-    private Button list1, taday_1, all_1, list2;//任务列表（page1）的按钮从右到左
-    private MenuItem gMenuItem1, gMenuItem2;//list1的两个按钮
-    private static boolean stase1 = true, stase2 = false;//列表显示状态
-    private TextView list_name_1;//清单名称
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private Button menu;
+
     private List<task> taskList = new ArrayList<task>();//清单列表
     private Button task_1;
-
+    private List<Fragment> list;
+    private RadioGroup radioGroup;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -50,126 +57,100 @@ public class Calendar_View extends AppCompatActivity {
         {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
-        viewPager = (ViewPager) findViewById(R.id.viewpager_1);
-        LayoutInflater inflater = getLayoutInflater();
-        view1 = inflater.inflate(R.layout.page1, null, false);
-        view2 = inflater.inflate(R.layout.page2, null, false);
-        view3 = inflater.inflate(R.layout.page3, null, false);
+//        initWindow();//影藏最顶层的系统菜单栏
+        radioGroup =findViewById(R.id.rg_group);
+        radioGroup.check(R.id.task_1);
 
-        viewList = new ArrayList<View>();// 将要分页显示的View装入数组中
-        viewList.add(view1);
-        viewList.add(view2);
-        viewList.add(view3);
-        PagerAdapter pagerAdapter = new MyPagerAdapter((ArrayList<View>) viewList);
-        viewPager.setAdapter(pagerAdapter);
+        viewPager = (ViewPager) findViewById(R.id.viewpager_1);
+
+        //viewlist实现viewPager
+//        view1 = inflater.inflate(R.layout.page1, null, false);
+//        view2 = inflater.inflate(R.layout.page2, null, false);
+//        view3 = inflater.inflate(R.layout.page3, null, false);
+//        view4 =inflater.inflate(R.layout.page4, null, false);
+//        viewList = new ArrayList<View>();// 将要分页显示的View装入数组中
+//        viewList.add(view1);
+//        viewList.add(view2);
+//        viewList.add(view3);
+//        viewList.add(view4);
+//        PagerAdapter pagerAdapter = new MyPagerAdapter((ArrayList<View>) viewList);
+//        viewPager.setAdapter(pagerAdapter);
+//        viewPager.setCurrentItem(0);
+        list = new ArrayList<Fragment>();
+        list.add(new page1());
+        list.add(new page2());
+        list.add(new page3());
+        list.add(new page4());
+
+        FragAdapter adapter = new FragAdapter(getSupportFragmentManager(), list);
+        viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
 
-        //page1按钮定义
-
-        //顶层菜单栏
-        list1 = view1.findViewById(R.id.list_spot_1);
-        taday_1 = view1.findViewById(R.id.taday_1);
-        all_1 = view1.findViewById(R.id.all_1);
-        list2 = view1.findViewById(R.id.list_1);
-        list_name_1 = view1.findViewById(R.id.list_name_1);
-        task_1 = findViewById(R.id.task_1);
-        //显示状态子菜单
-        list1.setOnClickListener(new View.OnClickListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                showPopupMenu(list1);
-            }
-        });
-
-        //回到今天按钮
-        taday_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //事务列表加载到今天
-                list_name_1.setText("今天");
-            }
-        });
-
-        //回到所有按钮
-        all_1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //事务列表加载到所有
-                list_name_1.setText("所有");
-            }
-        });
-
-        //打开清单菜单
-        list2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Calendar_View.this, Sign_UpActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        initTask(); // 初始化任务数据
-        taskAdapter adapter = new taskAdapter(Calendar_View.this, R.layout.arrary_button, taskList);
-        ListView listView = (ListView) view1.findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
-
-
-    }
-
-    private void initTask() {
-        for (int i = 0; i < 10; i++) {
-            task task1 = new task("打人", new java.sql.Timestamp(System.currentTimeMillis()), "没事", "1", R.drawable.level3, R.drawable.line);
-            taskList.add(task1);
-        }
-    }
-
-    private void showPopupMenu(View view) {
-        // View当前PopupMenu显示的相对View的位置
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        // menu布局
-        popupMenu.getMenuInflater().inflate(R.menu.showstyle, popupMenu.getMenu());
-        gMenuItem1 = popupMenu.getMenu().findItem(R.id.complete_1);
-        if (stase1 == false) {
-            gMenuItem1.setTitle("显示已完成");
-        }
-        gMenuItem2 = popupMenu.getMenu().findItem(R.id.priorit_1);
-        if (stase2 == false) {
-            gMenuItem2.setTitle("按时间排序");
-        }
-        // menu的item点击事件
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.complete_1:
-                        if (gMenuItem1.getTitle().equals("隐藏已完成")) {
-                            stase1 = false;
-                            //修改状态重新加载事务列表
-                        } else {
-                            stase1 = true;
-                            //修改状态重新加载事务列表
-                        }
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i){
+                    case R.id.task_1:
+                        //点击不同的radioGroup刷新到不同的viewpager
+                        viewPager.setCurrentItem(0, false);
                         break;
-                    case R.id.priorit_1:
-                        if (gMenuItem2.getTitle().equals("按优先级排序")) {
-                            stase2 = false;
-                            //修改状态重新加载事务列表
-                        } else {
-                            stase2 = true;
-                            //修改状态重新加载事务列表
-                        }
+                    case R.id.calendar_1:
+                        viewPager.setCurrentItem(1,false);
                         break;
-                    default:
+                    case R.id.yezi_1:
+                        viewPager.setCurrentItem(2,false);
+                        break;
+                    case R.id.setup_1:
+                        viewPager.setCurrentItem(3,false);
+                        break;
+
                 }
-                return true;
-            }
-        });
-        // PopupMenu关闭事件
-        popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {
-            public void onDismiss(PopupMenu menu) {
             }
         });
 
-        popupMenu.show();
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageSelected(int position) {
+                // arg0是当前选中的页面的Position
+                switch(position)
+                {
+                    case 0:
+                        radioGroup.check(R.id.task_1);
+                        break;
+                    case 1:
+                        radioGroup.check(R.id.calendar_1);
+                        break;
+                    case 2:
+                        radioGroup.check(R.id.yezi_1);
+                        break;
+                    case 3:
+                        radioGroup.check(R.id.setup_1);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+                // arg0 :当前页面，及你点击滑动的页面；arg1:当前页面偏移的百分比；arg2:当前页面偏移的像素位置
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+                //arg0 ==1的时表示正在滑动，arg0==2的时表示滑动完毕了，arg0==0的时表示什么都没做。
+
+            }
+        });
     }
+//    private void initWindow() {//初始化窗口属性，让状态栏和导航栏透明
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//
+//        }
+//    }
 }
+
+
+

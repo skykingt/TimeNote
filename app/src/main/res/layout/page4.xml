@@ -6,16 +6,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/none"
     android:gravity="center"
-    android:id="@+id/page2">
+    android:id="@+id/page4">
 
     <include
-        android:id="@+id/title_2"
-        layout="@layout/title_base2"
+        android:id="@+id/title_4"
+        layout="@layout/title_base4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </include>
-
-
-
 </android.support.constraint.ConstraintLayout>

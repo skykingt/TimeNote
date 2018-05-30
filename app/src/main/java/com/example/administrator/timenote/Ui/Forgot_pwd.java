@@ -86,6 +86,9 @@ public class Forgot_pwd extends AppCompatActivity {
                 {
                     email3_error.setVisibility(View.INVISIBLE);
                 }
+                else{
+
+                }
             }
         });
 

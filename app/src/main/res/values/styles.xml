@@ -26,6 +26,8 @@
     <style name="none_2">
         <item name="android:background">#ffffff</item>
         <item name="android:button">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="dialog" parent="@android:style/Theme.Dialog">

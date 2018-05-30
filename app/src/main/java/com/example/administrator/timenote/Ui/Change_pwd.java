@@ -47,12 +47,13 @@ public class Change_pwd extends AppCompatActivity {
                 if(spwd1.length()>=8&&(spwd1.equals(spwd2)))
                 {
                     //修改密码
+                    finish();
                 }
                 else if(spwd1.length()<8)
                     {
                         pwd1_error.setVisibility(View.VISIBLE);
                     }
-                    else if(spwd1.equals(spwd2))
+                    else if(spwd1.equals(spwd2)!=true)
                     {
                         pwd2_error.setVisibility(View.VISIBLE);
                     }

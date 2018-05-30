@@ -47,4 +47,13 @@
     <string name="_26">26</string>
     <string name="a">A</string>
     <string name="level">level</string>
+    <string name="五月">五月</string>
+    <string name="叶子计时">叶子计时</string>
+    <string name="开始专注">开始专注</string>
+    <string name="今天">今天</string>
+    <string name="垃圾桶">垃圾桶</string>
+    <string name="近三天">近三天</string>
+    <string name="头像名">sky</string>
+    <string name="个性签名">熬过这周我就去吃海底捞</string>
+    <string name="自定义">自定义</string>
 </resources>

@@ -26,7 +26,9 @@ public class task {
     public String getTaskp() {
         return taskp;
     }
-
+    public task(Date date_1){
+        this.date_1=date_1;
+    }
 
 
 

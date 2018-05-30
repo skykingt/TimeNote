@@ -8,6 +8,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -22,7 +23,6 @@
         <activity android:name=".Ui.Calendar_View" />
         <activity android:name=".Ui.Forgot_pwd" />
         <activity android:name=".Ui.Change_pwd" />
-        <activity android:name=".Ui.EndTitle" />
         <activity android:name=".Ui.Mainlist"></activity>
     </application>
 

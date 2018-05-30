@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0033"
-    android:id="@+id/page3"
+    android:background="@drawable/none"
     android:gravity="center"
-    android:orientation="vertical">
+    android:id="@+id/page3">
 
-    <TextView
+    <include
+        android:id="@+id/title_3"
+        layout="@layout/title_base3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </include>
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="第一个Page"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="302dp"
+        android:text="@string/开始专注"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_3" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_base4"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.timenote.Ui.Title_base1_ad">
+
+    <TextView
+        android:id="@+id/month_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/设置"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+</RelativeLayout>
