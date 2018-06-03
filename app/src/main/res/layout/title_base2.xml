@@ -7,20 +7,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.administrator.timenote.Ui.Title_base1_ad">
 
-    <TextView
-        android:id="@+id/month_name_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:text="@string/五月"
-        android:textColor="#ffffff"
-        android:textSize="25sp" />
 
     <Button
         android:id="@+id/taday_2"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_alignBottom="@+id/month_name_1"
+        android:layout_alignTop="@+id/list_spot_2"
         android:layout_marginEnd="13dp"
         android:layout_marginRight="13dp"
         android:layout_toLeftOf="@+id/list_spot_2"
@@ -30,14 +22,27 @@
 
     <Button
         android:id="@+id/list_spot_2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:background="@drawable/list_spot_1"
-        />
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/list_spot_1" />
+
+    <Button
+        android:id="@+id/calendar_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:background="@drawable/none"
+        android:text="@string/月视图"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
 
 </RelativeLayout>

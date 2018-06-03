@@ -50,14 +50,22 @@ public class Forgot_pwd extends AppCompatActivity {
                 String semail3=email3.getText().toString();
                 if(semail3.indexOf("@")>0)
                 {
-                    send.setVisibility(View.INVISIBLE);
-                    resend2.setVisibility(View.VISIBLE);
-                    recLen=60;
-                    cdt.start();
+                    if(semail3.equals("972357450@qq.com")==true)
+                    {
+                        send.setVisibility(View.INVISIBLE);
+                        resend2.setVisibility(View.VISIBLE);
+                        recLen = 60;
+                        cdt.start();
+                    }
+                    else {
+                        email3_error.setVisibility(View.VISIBLE);
+                        email3_error.setText("邮箱不存在，请输入正确的邮箱");
+                    }
                 }
                 else
                 {
                     email3_error.setVisibility(View.VISIBLE);
+                    email3_error.setText("邮箱格式错误，请输入正确的邮箱");
                 }
             }
         });
@@ -71,6 +79,7 @@ public class Forgot_pwd extends AppCompatActivity {
                     //修改密码
                     Intent intent=new Intent(Forgot_pwd.this,Change_pwd.class);
                     startActivity(intent);
+                    finish();
                 }
                 else
                 {

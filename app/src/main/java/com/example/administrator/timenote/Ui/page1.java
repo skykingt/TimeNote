@@ -23,20 +23,23 @@ import com.example.administrator.timenote.R;
 
 public class page1  extends Fragment {
 
+    private DrawerLayout drawerLayout;
+    private MenuItem gMenuItem1, gMenuItem2;//list1的两个按钮
+    private LayoutInflater inflater;
     private Button list1, taday_1, all_1, list2;//任务列表（page1）的按钮从右到左
     private TextView list_name_1;//清单名称
-    private LayoutInflater inflater;
-    private MenuItem gMenuItem1, gMenuItem2;//list1的两个按钮
-    private static boolean stase1 = true, stase2 = false;//列表显示状态
-    private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    private Button menu;
+    private Button new_button;//新建事务
+    private static boolean stase1 = true, stase2 = false;//列表显示状态
+
+
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.inflater = inflater;
         View view = inflater.inflate(R.layout.page1, container, false);
         drawerLayout = (DrawerLayout) view.findViewById(R.id.page1);
         navigationView = (NavigationView)view.findViewById(R.id.nav);
         View headerView = navigationView.getHeaderView(0);//获取头布局
+        new_button=view.findViewById(R.id.new_task2);
 
         list2 = view.findViewById(R.id.list_1);
         list2.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +111,14 @@ public class page1  extends Fragment {
                 adapter.addItem(b);
             }
         }
+
+        //新建事务逻辑
+        new_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                New_task new_task= new New_task(inflater.getContext(),R.style.dialog);
+                new_task.show();
+            }
+        });
         return view;
     }
     private void showPopupMenu(View view) {

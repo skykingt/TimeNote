@@ -40,5 +40,18 @@
             <item name="android:backgroundDimEnabled">true</item>
             <item name="android:backgroundDimAmount">0.6</item>
      </style>
+    <style name="CustomDayTextAppearance"
+        parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
 
+    <style name="MaterialCalendarTextStyelNormal">
+
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#80000000</item>
+
+    </style>
+    <style name="level0">
+        <item name="android:background">@drawable/level0</item>
+    </style>
 </resources>

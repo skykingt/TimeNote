@@ -1,5 +1,6 @@
 package com.example.administrator.timenote.Ui;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText pwd,uesrid;
 
+    @SuppressLint("NewApi")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading_layout);

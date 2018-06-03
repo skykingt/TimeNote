@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/none"
-    android:gravity="center"
-    android:id="@+id/page2">
+    android:background="#ffffff"
+    android:id="@+id/page2"
+    android:orientation="vertical">
 
     <include
         android:id="@+id/title_2"
         layout="@layout/title_base2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </include>
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:mcv_tileHeight="32dp"
+        app:mcv_weekDayLabels="@array/周期模式1"
+        app:mcv_weekDayTextAppearance="@style/MaterialCalendarTextStyelNormal"
+        app:mcv_tileWidth="match_parent" />
+
+    <ListView
+        android:id="@+id/list_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" >
+    </ListView>
+
+    <Button
+        android:id="@+id/new_task1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="-150dp"
+        android:background="@drawable/new_button"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="250dp" />
 
 
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

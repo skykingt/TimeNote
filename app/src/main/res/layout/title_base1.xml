@@ -21,20 +21,20 @@
         android:id="@+id/list_name_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/all_1"
         android:layout_toEndOf="@+id/list_1"
         android:layout_toRightOf="@+id/list_1"
         android:text="@string/所有"
         android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/taday_1"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
         android:layout_toLeftOf="@+id/list_spot_1"
         android:layout_toStartOf="@+id/list_spot_1"
         android:background="@drawable/calendar2"
@@ -59,8 +59,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
         android:background="@drawable/list_spot_1"
 />
 

@@ -24,12 +24,12 @@ public class taskAdapter extends ArrayAdapter<task> {
     public View getView(int position, View convertView, ViewGroup parent){
         task t=getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId,null,false);
-        View view_line=view.findViewById(R.id.view_color_1);
-        TextView taskname=view.findViewById(R.id.taskname);
-        TextView date=view.findViewById(R.id.data_1);
-        TextView taskdes=view.findViewById(R.id.taskdes);
-        TextView taskp=view.findViewById(R.id.taskp);
-        ImageView ImageId=view.findViewById(R.id.image_level);
+        View view_line=convertView.findViewById(R.id.view_color_1);
+        TextView taskname=convertView.findViewById(R.id.taskname);
+        TextView date=convertView.findViewById(R.id.data_1);
+        TextView taskdes=convertView.findViewById(R.id.taskdes);
+        TextView taskp=convertView.findViewById(R.id.taskp);
+        ImageView ImageId=convertView.findViewById(R.id.image_level);
 
         taskname.setText(t.getTaskname());
         SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH:mm:SS");

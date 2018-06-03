@@ -35,6 +35,10 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:support-vector-drawable:26.1.0'
     testImplementation 'junit:junit:4.12'
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    compile 'com.jakewharton:butterknife:8.2.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/Other/Android-PickerView-master.zip')
+    compile 'com.contrarywind:Android-PickerView:4.1.3'
 }

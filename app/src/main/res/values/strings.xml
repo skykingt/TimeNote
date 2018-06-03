@@ -56,4 +56,29 @@
     <string name="头像名">sky</string>
     <string name="个性签名">熬过这周我就去吃海底捞</string>
     <string name="自定义">自定义</string>
+    <string name="月视图">月视图</string>
+    <string name="准备做什么">准备做什么？</string>
+    <string name="请选择清单">请选择清单</string>
+    <string name="请选择优先级">请选择优先级</string>
+    <string name="高">高</string>
+    <string name="中">中</string>
+    <string name="低">低</string>
+    <string name="无">无</string>
+    <string name="叶子背景">叶子背景</string>
+    <string name="晚上好">晚上好</string>
+    <string name="叶子文本">今天还没收获叶子</string>
+    <string name="事务文本">事务文本</string>
+    <string name="完成">完成</string>
+    <string name="清单名称">清单名称</string>
+    <string name="头像">头像</string>
+    <string name="用户昵称">用户昵称</string>
+    <string-array name="周期模式1">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
 </resources>
