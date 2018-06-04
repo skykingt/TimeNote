@@ -129,5 +129,4 @@ public class Email_sure extends Dialog {
                 resend.setVisibility(View.VISIBLE);
             }
         };
-
 }

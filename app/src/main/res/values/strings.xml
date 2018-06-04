@@ -72,6 +72,13 @@
     <string name="清单名称">清单名称</string>
     <string name="头像">头像</string>
     <string name="用户昵称">用户昵称</string>
+    <string name="默认提醒时间">默认提醒时间</string>
+    <string name="铃声">铃声</string>
+    <string name="振动">振动</string>
+    <string name="提醒频率">提醒频率</string>
+    <string name="叶子时长">叶子时长</string>
+    <string name="时长">25分钟</string>
+    <string name="叶子text">1</string>
     <string-array name="周期模式1">
         <item>日</item>
         <item>一</item>
@@ -80,5 +87,32 @@
         <item>四</item>
         <item>五</item>
         <item>六</item>
+    </string-array>
+    <string-array name="time_select">
+        <item>1:00</item>
+        <item>2:00</item>
+        <item>3:00</item>
+        <item>8:00</item>
+        <item>9:00</item>
+        <item>10:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>18:00</item>
+        <item>21:00</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="time_ring">
+        <item>nono</item>
+        <item>默认</item>
+    </string-array>
+    <string-array name="time_even">
+        <item>从不</item>
+        <item>每天</item>
+        <item>每周工作日（周一至周五）</item>
+        <item>每六</item>
+        <item>每月（当天）</item>
+        <item>每年（当天）</item>
+        <item>自定义</item>
     </string-array>
 </resources>
