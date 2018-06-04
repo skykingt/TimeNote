@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -36,14 +37,20 @@ public class Sign_UpActivity extends AppCompatActivity {
         pwd_error_1=findViewById(R.id.pwd_error_1);
         pwd_error_2=findViewById(R.id.pwd_error_2);
 
+        // 密码隐藏
+        pwd.setTransformationMethod(PasswordTransformationMethod
+                .getInstance());
+        pwd2.setTransformationMethod(PasswordTransformationMethod
+                .getInstance());
+
         back1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 finish();
-                //转到登录界面
+                // 转到登录界面
             }
         });
 
-        //确认注册按钮
+        // 确认注册按钮
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String semail=email.getText().toString();
@@ -62,24 +69,24 @@ public class Sign_UpActivity extends AppCompatActivity {
                     pwd2.requestFocus();
                     name.requestFocus();
                 }
-                //注册账号，返回注册结果
+                // 注册账号，返回注册结果
 //                Intent intent =new Intent(Sign_UpActivity.this,MainActivity.class);
 //                startActivity(intent);
 //                finish();
             }
         });
 
-        //已有账号按钮
+        // 已有账号按钮
         button2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent =new Intent(Sign_UpActivity.this,MainActivity.class);
                 startActivity(intent);
-                //转到登录界面
+                // 转到登录界面
             }
         });
 
 
-        //邮箱焦点获得与失去
+        // 邮箱焦点获得与失去
         email.setOnFocusChangeListener(new android.view.View.
                 OnFocusChangeListener() {
             @Override
@@ -99,7 +106,7 @@ public class Sign_UpActivity extends AppCompatActivity {
             }
         });
 
-        //密码焦点获得与失去
+        // 密码焦点获得与失去
         pwd.setOnFocusChangeListener(new android.view.View.
                 OnFocusChangeListener() {
             @Override
