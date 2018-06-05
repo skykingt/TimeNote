@@ -43,4 +43,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/Other/Android-PickerView-master.zip')
     compile 'com.contrarywind:Android-PickerView:4.1.3'
+    implementation files('libs/ksoap2-android-assembly-3.6.2-jar-with-dependencies.jar')
 }

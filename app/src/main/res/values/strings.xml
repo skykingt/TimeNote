@@ -79,6 +79,17 @@
     <string name="叶子时长">叶子时长</string>
     <string name="时长">25分钟</string>
     <string name="叶子text">1</string>
+    <string name="提醒时间">1:00</string>
+    <string name="提醒频率设置">每周一次</string>
+    <string name="收集箱">收集箱</string>
+    <string name="事务名称">事务名称</string>
+    <string name="描述">描述</string>
+    <string name="设置优先级">设置优先级</string>
+    <string name="保存">保存</string>
+    <string name="删除">删除</string>
+    <string name="用户">用户</string>
+    <string name="退出登录">退出登录</string>
+    <string name="个人中心">个人中心</string>
     <string-array name="周期模式1">
         <item>日</item>
         <item>一</item>

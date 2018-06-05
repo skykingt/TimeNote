@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.administrator.timenote.Manager.UserManager.Email_ck;
 import com.example.administrator.timenote.R;
 
 public class Forgot_pwd extends AppCompatActivity {
@@ -96,7 +97,10 @@ public class Forgot_pwd extends AppCompatActivity {
                     email3_error.setVisibility(View.INVISIBLE);
                 }
                 else{
-
+                    if(!Email_ck.isEmail(email3.getText().toString())){
+                        email3_error.setVisibility(View.VISIBLE);
+                        email3_error.setText("邮箱格式错误，请输入正确的邮箱");
+                    }
                 }
             }
         });
@@ -111,7 +115,7 @@ public class Forgot_pwd extends AppCompatActivity {
             }
         });
     }
-    CountDownTimer cdt = new CountDownTimer(3000, 1000) {
+    CountDownTimer cdt = new CountDownTimer(60000, 1000) {
 
         public void onTick(long millisUntilFinished) {
             recLen--;

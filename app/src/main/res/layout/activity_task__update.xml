@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.administrator.timenote.Ui.Task_Update">
+    <include
+        android:id="@+id/task_upda_title"
+        layout="@layout/task_update_titlt">
+    </include>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/事务名称"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_upda_title" />
+
+    <EditText
+        android:id="@+id/task_upda_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+    </EditText>
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_upda_name">
+
+    </View>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/描述"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+    <EditText
+        android:id="@+id/task_update_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+    </EditText>
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_update_d">
+
+    </View>
+
+    <Button
+        android:id="@+id/time_setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/time_setup"
+        app:layout_constraintEnd_toStartOf="@+id/ring_setup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <Button
+        android:id="@+id/ring_setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/ring_setup"
+        app:layout_constraintEnd_toStartOf="@+id/rering_setup"
+        app:layout_constraintStart_toEndOf="@+id/time_setup"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <Button
+        android:id="@+id/rering_setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/rering_setup"
+        app:layout_constraintStart_toEndOf="@+id/ring_setup"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <Button
+        android:id="@+id/level_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableTop="@drawable/level0"
+        android:text="@string/设置优先级"
+        android:textColor="#666666"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_setup" />
+
+</android.support.constraint.ConstraintLayout>

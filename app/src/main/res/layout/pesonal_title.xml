@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.timenote.Ui.Title_base1_ad">
+
+    <Button
+        android:id="@+id/back_9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:background="@drawable/back" />
+
+    <TextView
+        android:id="@+id/user_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/个人中心"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        tools:ignore="UnknownIdInLayout" />
+
+
+</RelativeLayout>
